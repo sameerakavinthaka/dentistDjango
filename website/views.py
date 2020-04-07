@@ -17,7 +17,7 @@ def contact(request):
 			message_name,	 # subject
 			message,		 # messages
 			message_email,	 # from email
-			['skavinthaka@gmail.com'] #to email
+			['sakuni_kanchana@yahoo.com'] #to email
 			)
 
 
@@ -55,7 +55,7 @@ def appointment(request):
 			'Appointment Request',	 # subject
 			'message',		 # messages
 			'message_email',	 # from email
-			['skavinthaka@gmail.com'] #to email
+			['sakuni_kanchana@yahoo.com'] #to email
 			)
 
 
