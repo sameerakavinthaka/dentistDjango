@@ -36,7 +36,7 @@ def pricing(request):
 def service(request):
 	return render(request, 'service.html', {}) 
 
-def appointment(request): 
+def appointment(request):  
 	if request.method == "POST":
 
 		your_name = request.POST ['your-name']
@@ -49,12 +49,12 @@ def appointment(request):
 	
 
 		#send an mail
-		appointment = " Name :" + your_name + "Phone :" + your_phone + "Email :" + your_email + "Your address :" + your_address + "Schedule :" + your_schedule + "Date :" + your_date + " Message :" + your_message
+		appointment = " Name : " + your_name + "Phone : " + your_phone + "Email : " + your_email + "Your address : " + your_address + "Schedule : " + your_schedule + "Date : " + your_date + " Message : " + your_message
 
 		send_mail(
 			'Appointment Request',	 # subject
-			'message',		 # messages
-			'message_email',	 # from email
+			appointment,		 # messages
+			your_email,	 # from email
 			['skavinthaka@gmail.com'] #to email
 			)
 
@@ -72,3 +72,5 @@ def appointment(request):
 
 	else:
 		return render(request, 'home.html', {})
+
+
